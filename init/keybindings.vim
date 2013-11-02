@@ -38,11 +38,12 @@ map <C-p> :bp<CR>
 map <C-n> :bn<CR>
 cabbrev bd <c-r>=(getcmdtype()==':' && getcmdpos()==1 ? 'Bclose' : '')<CR>
 
+" ctrlp
+let g:ctrlp_map = '<leader>p'
+nnoremap <leader>b  :CtrlPBuffer<CR>
+
 " Git blame
 map <leader>gb   :Gblame<CR>
-
-" Command-T
-map <leader>t   :CommandTFlush<CR>:CommandT<CR>
 
 " Comment/uncomment lines
 map <leader>/   <plug>NERDCommenterToggle
