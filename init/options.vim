@@ -53,3 +53,5 @@ nnoremap <silent> <Space> :nohlsearch<Bar>:echo<CR>""
 if has("gui_running")
   set noballooneval
 endif
+
+set t_ut=
