@@ -3,7 +3,6 @@ set guioptions-=T               " Remove GUI toolbar
 set guioptions-=e               " Use text tab bar, not GUI
 set guioptions-=rL              " Remove scrollbars
 set visualbell                  " Suppress audio/visual error bell
-set notimeout                   " No command timeout
 set showcmd                     " Show typed command prefixes while waiting for operator
 set backspace=indent,eol,start  " Make backspace work like most other apps
 set ignorecase                  " Match when capitalization not used
