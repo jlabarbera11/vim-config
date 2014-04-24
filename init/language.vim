@@ -12,10 +12,19 @@ endfunction
 autocmd BufWritePre *.m,*.h,*.c,*.mm,*.cpp,*.hpp call StripTrailingWhitespace()
 
 " Ruby, Rails
-autocmd BufWritePre *.rb,*.yml,*.js,*.css,*.less,*.sass,*.scss,*.html,*.xml,*.erb,*.haml,*.feature call StripTrailingWhitespace()
+autocmd BufWritePre *.rb,*.rake,*.yml,*.js,*.css,*.less,*.sass,*.scss,*.html,*.xml,*.erb,*.haml,*.feature call StripTrailingWhitespace()
 
-" Java, PHP
-autocmd BufWritePre *.java,*.php call StripTrailingWhitespace()
+" Java, XML
+autocmd BufWritePre *.java,*.xml call StripTrailingWhitespace()
+autocmd FileType java set tabstop=4                   " Tab settings
+autocmd FileType java set shiftwidth=4                   " Tab settings
+autocmd FileType ant set tabstop=4                " Width of autoindent
+autocmd FileType ant set shiftwidth=4                " Width of autoindent
+autocmd FileType xml set tabstop=4                " Width of autoindent
+autocmd FileType xml set shiftwidth=4                " Width of autoindent
+
+" PHP
+autocmd BufWritePre *.php call StripTrailingWhitespace()
 
 " Highlight Ruby files
 au BufRead,BufNewFile *.thor set filetype=ruby
@@ -39,3 +48,9 @@ autocmd FileType ruby imap  <Space>=><Space>
 
 " Open all folds in Markdown.
 autocmd FileType mkd normal zR
+
+" For use with wikiUtil
+autocmd BufReadPost *.wiki setfiletype Wikipedia
+
+" For brazil Config files
+au BufRead,BufNewFile Config set filetype=perl

@@ -16,3 +16,8 @@ runtime! init/**.vim
 
 " Machine-local vim settings - keep this at the end
 silent! source ~/.vimrc.local
+
+noremap <Up> <NOP>
+noremap <Down> <NOP>
+noremap <Left> <NOP>
+noremap <Right> <NOP>
