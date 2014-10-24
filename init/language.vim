@@ -12,7 +12,7 @@ endfunction
 autocmd BufWritePre *.m,*.h,*.c,*.mm,*.cpp,*.hpp call StripTrailingWhitespace()
 
 " Ruby, Rails
-autocmd BufWritePre *.rb,*.rake,*.yml,*.js,*.css,*.less,*.sass,*.scss,*.html,*.xml,*.erb,*.haml,*.feature call StripTrailingWhitespace()
+autocmd BufWritePre *.rb,*.rake,Rakefile,*.yml,*.js,*.css,*.less,*.sass,*.scss,*.html,*.xml,*.erb,*.haml,*.feature call StripTrailingWhitespace()
 
 " Java, XML
 autocmd BufWritePre *.java,*.xml call StripTrailingWhitespace()
@@ -32,6 +32,11 @@ au BufRead,BufNewFile *.god set filetype=ruby
 au BufRead,BufNewFile Gemfile* set filetype=ruby
 au BufRead,BufNewFile Vagrantfile set filetype=ruby
 au BufRead,BufNewFile soloistrc set filetype=ruby
+
+" Javascript
+autocmd BufWritePre *.js call StripTrailingWhitespace()
+autocmd FileType js set tabstop=4                   " Tab settings
+autocmd FileType js set shiftwidth=4                   " Tab settings
 
 " Highlight JSON files as javascript
 autocmd BufRead,BufNewFile *.json set filetype=javascript
