@@ -6,7 +6,7 @@ set visualbell                  " Suppress audio/visual error bell
 set showcmd                     " Show typed command prefixes while waiting for operator
 set backspace=indent,eol,start  " Make backspace work like most other apps
 set ignorecase                  " Match when capitalization not used
-set smartcase
+set smartcase                   " Smart case-sensitivity when searching (overrides ignorecase) 
 
 set expandtab                   " Use soft tabs
 set tabstop=2                   " Tab settings
@@ -16,6 +16,8 @@ set shiftwidth=2                " Width of autoindent
 set number                      " Line numbers
 set wrap linebreak nolist       " Soft wrapping
 
+set mouse=a                     " enable mouse intergration
+set ttymouse=xterm2
 set showmatch                   " Show matching brackets
 set hidden                      " Allow hidden, unsaved buffers
 set splitright                  " Add new windows towards the right
@@ -36,7 +38,6 @@ set laststatus=2                " Always show statusline
 
 set incsearch                   " Incremental search
 set history=1024                " History size
-set smartcase                   " Smart case-sensitivity when searching (overrides ignorecase)
 
 set swapfile                    " Keep swapfiles
 set directory=~/.vim-tmp,~/tmp,/var/tmp,/tmp
